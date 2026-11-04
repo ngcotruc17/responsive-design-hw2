@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <script src="gallery.js"></script>
+</head>
+<body onload="addTabFocus()">
+
+    <header>
+        <h1>Accessible Interactive Photo Gallery</h1>
+        <p>Hover over an image with your mouse or use the Tab key to navigate using your keyboard.</p>
+    </header>
+
+    <main>
+        <!-- Main preview display area -->
+        <div id="image">
+            Hover over an image below to display here.
+        </div>
+
+        <!-- Thumbnail gallery with 6 accessible images -->
+        <div class="gallery">
+            <img class="preview"
+                 src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80"
+                 alt="Snow-capped mountain peaks under a clear blue sky"
+                 onmouseover="upDate(this)"
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)"
+                 onblur="unDo()">
+
+            <img class="preview"
+                 src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
+                 alt="Tropical white sand beach with turquoise ocean water"
+                 onmouseover="upDate(this)"
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)"
+                 onblur="unDo()">
+
+            <img class="preview"
+                 src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80"
+                 alt="Misty evergreen forest with tall pine trees in morning fog"
+                 onmouseover="upDate(this)"
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)"
+                 onblur="unDo()">
+
+            <img class="preview"
+                 src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80"
+                 alt="Lush green forest canopy with warm sunbeams streaming through leaves"
+                 onmouseover="upDate(this)"
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)"
+                 onblur="unDo()">
+
+            <img class="preview"
+                 src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80"
+                 alt="Vast rolling desert sand dunes under a warm sunset glow"
+                 onmouseover="upDate(this)"
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)"
+                 onblur="unDo()">
+
+            <img class="preview"
+                 src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=600&q=80"
+                 alt="Powerful cascading waterfall flowing over rocky cliffs into a clear river"
+                 onmouseover="upDate(this)"
+                 onmouseleave="unDo()"
+                 onfocus="upDate(this)"
+                 onblur="unDo()">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Accessible Interactive Photo Gallery. Designed for mouse, keyboard, and screen-reader accessibility.</p>
+    </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,76 @@
+body {
+    background-color: #dedede;
+}
+
+h1 {
+    text-align: center;
+    font-family:Arial, sans-serif;
+    font-size: 32px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-family:Arial, sans-serif;
+}
+
+p {
+   font-size: 25px;
+   font-family:Arial, sans-serif;
+}
+
+img{
+  width:100%;
+}
+
+p{
+  text-align:center;
+}
+
+div img{
+    width:150px;
+    height: 150px;
+    display:block;
+    margin:auto;
+}
+
+div{
+  display: inline-block;
+  width: 24%;
+  margin: 5px;
+  padding: 2px;
+}
+
+/* ==========================================================================
+   Query #1: Tablet View (triggers at 772px)
+   - Layout of divs changes to 45% of viewport width (45vw / 45%)
+   - Images have a maximum height of 30% of viewport height (30vh)
+   - Divs use inline-block and vertical-align to sit cleanly side-by-side
+   ========================================================================== */
+@media screen and (min-width: 772px) {
+  div {
+    width: 45%;
+    width: 45vw;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  img, div img {
+    max-height: 30vh;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Query #2: Large Screen View (triggers at 998px)
+   - Layout of divs changes to 30% of viewport width (30vw / 30%)
+   - No other changes needed
+   ========================================================================== */
+@media screen and (min-width: 998px) {
+  div {
+    width: 30%;
+    width: 30vw;
+  }
+}

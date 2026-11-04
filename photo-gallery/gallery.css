@@ -1,0 +1,102 @@
+/* gallery.css - Stylesheet for Accessible Interactive Photo Gallery */
+
+/* Base reset and typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #1f2937;
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 900px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #374151;
+}
+
+/* Main large image preview container */
+#image {
+    width: 100%;
+    max-width: 620px;
+    height: 460px;
+    margin: 0 auto 30px auto;
+    border: 5px solid #1f2937;
+    border-radius: 12px;
+    background-color: #4c1d95; /* Deep purple with > 9:1 contrast ratio against white */
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: background-image 0.2s ease-in-out;
+}
+
+/* Gallery thumbnails container */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Thumbnail preview images */
+.preview {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border: 4px solid #374151;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* High-contrast hover and focus states for keyboard accessibility */
+.preview:hover,
+.preview:focus {
+    transform: scale(1.1);
+    border-color: #1d4ed8;
+    outline: 4px solid #d97706; /* High-contrast amber outline for clear keyboard focus */
+    outline-offset: 3px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+footer {
+    margin-top: 40px;
+    padding: 15px 0;
+    font-size: 0.95rem;
+    color: #4b5563;
+    border-top: 1px solid #d1d5db;
+}
+
